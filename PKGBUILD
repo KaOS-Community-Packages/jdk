@@ -1,10 +1,8 @@
-
 pkgname=jdk
 _major=8
-_minor=112
-_build=b15
-_pkgver=${_major}u${_minor}
-pkgver=${_major}.${_minor}
+_minor=121
+_build=b13
+pkgver=8.121
 pkgrel=1
 pkgdesc="Java Development Kit"
 arch=('x86_64')
@@ -18,7 +16,7 @@ backup=('etc/derby.conf'
         'etc/profile.d/jdk.sh')
 install=jdk.install
 # check version http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html
-source=("http://download.oracle.com/otn-pub/java/jdk/${_pkgver}-$_build/jdk-${_pkgver}-linux-x64.tar.gz"
+source=("http://download.oracle.com/otn-pub/java/jdk/${_major}u${_minor}-$_build/jdk-${_major}u${_minor}-linux-x64.tar.gz"
         'derby.conf'
         'derby.service'
         'java-mission-control.desktop'
@@ -28,17 +26,17 @@ source=("http://download.oracle.com/otn-pub/java/jdk/${_pkgver}-$_build/jdk-${_p
         'javaws-launcher'
         'jdk.csh'
         'jdk.sh')
-md5sums=('de9b7a90f0f5a13cfcaa3b01451d0337'  
-         '4bdff6982c66d24a879c424aaac3d04d'  
-         '77f3b7ddf55c112f97a665a825bf764f'  
-         '536ea84bba5eb6bfe8f601b41af9769c'  
-         'da10de5e6507c392fc9871076ef53ec6' 
-         'f4e25ef1ccef8d36ff2433c3987a64fe'  
-         '35fd89c5c170021d2183593335703703'  
-         '45c15a6b4767288f2f745598455ea2bf'  
-         'e81bb7853b071df6adca0b90f0c2ac2d'  
+md5sums=('91972fb4e753f1b6674c2b952d974320'
+         '4bdff6982c66d24a879c424aaac3d04d'
+         '77f3b7ddf55c112f97a665a825bf764f'
+         '536ea84bba5eb6bfe8f601b41af9769c'
+         'da10de5e6507c392fc9871076ef53ec6'
+         'f4e25ef1ccef8d36ff2433c3987a64fe'
+         '35fd89c5c170021d2183593335703703'
+         '45c15a6b4767288f2f745598455ea2bf'
+         'e81bb7853b071df6adca0b90f0c2ac2d'
          'a06d46b277e2926d73d2ee11c9950973')
-         
+
 # edit apps-x86_64-makepkg to use this DLAGENTS
 DLAGENTS=('http::/usr/bin/curl -LC - -b "oraclelicense=a" -O')
 
