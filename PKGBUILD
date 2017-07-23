@@ -1,8 +1,8 @@
 pkgname=jdk
 _major=8
-_minor=121
-_build=b13
-pkgver=8.121
+_minor=131
+_build=b11
+pkgver=8.131
 pkgrel=1
 pkgdesc="Java Development Kit"
 arch=('x86_64')
@@ -26,7 +26,7 @@ source=("http://download.oracle.com/otn-pub/java/jdk/${_major}u${_minor}-$_build
         'javaws-launcher'
         'jdk.csh'
         'jdk.sh')
-md5sums=('91972fb4e753f1b6674c2b952d974320'
+md5sums=('75b2cb2249710d822a60f83e28860053'
          '4bdff6982c66d24a879c424aaac3d04d'
          '77f3b7ddf55c112f97a665a825bf764f'
          '536ea84bba5eb6bfe8f601b41af9769c'
