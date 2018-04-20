@@ -1,9 +1,9 @@
 pkgname=jdk
 _major=8
-_minor=152
-_build=b16
-_hash=aa0333dd3019491ca4f6ddbe78cdb6d0
-pkgver=8.152
+_minor=172
+_build=b11
+_hash=a58eab1ec242421181065cdc37240b08
+pkgver=8.172
 pkgrel=1
 pkgdesc="Java Development Kit"
 arch=('x86_64')
@@ -27,7 +27,7 @@ source=("http://download.oracle.com/otn-pub/java/jdk/${_major}u${_minor}-${_buil
         'javaws-launcher'
         'jdk.csh'
         'jdk.sh')
-md5sums=('20dddd28ced3179685a5f58d3fcbecd8'
+md5sums=('eda2945e8c02b84adbf78f46c37b71c1'
          '4bdff6982c66d24a879c424aaac3d04d'
          '77f3b7ddf55c112f97a665a825bf764f'
          '536ea84bba5eb6bfe8f601b41af9769c'
@@ -47,7 +47,7 @@ package() {
   mkdir -p "$pkgdir"/{opt/java/,usr/{lib/{mozilla/plugins,systemd/system},share/licenses/jdk},etc/{.java/.systemPrefs,profile.d}}
 
   msg2 "Removing the redundancies"
-  rm -r db/bin/*.bat jre/{plugin/,COPYRIGHT,LICENSE,*.txt} man/ja # lib/{desktop,visualvm/platform/docs}
+  rm -r jre/{plugin/,COPYRIGHT,LICENSE,*.txt} man/ja # lib/{desktop,visualvm/platform/docs}
 
   msg2 "Moving stuff in place"
   mv jre/lib/desktop/* man "$pkgdir"/usr/share/
